@@ -1,0 +1,38 @@
+/* ============================================================
+   M2 BARBEARIA — RESPONSIVE
+   Todos os @media queries
+   ============================================================ */
+
+@media (max-width: 1000px) {
+  .servicos-grid { grid-template-columns: 1fr 1fr; }
+  .sobre-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .sobre-visual { display: none; }
+  .agendar-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .reviews-layout { grid-template-columns: 1fr; }
+  .review-summary { position: static; }
+  .loc-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .hero-right-deco { display: none; }
+}
+
+@media (max-width: 700px) {
+  #navbar { padding: 1rem 4%; }
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .servicos-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+  .galeria-item { grid-column: span 1 !important; grid-row: span 1 !important; }
+  .galeria-item .foto-placeholder { height: 160px !important; }
+  .contact-cards { grid-template-columns: 1fr; }
+  section,
+  #sobre,
+  #servicos,
+  #galeria,
+  #agendar,
+  #reviews,
+  #localizacao { padding: 4.5rem 4%; }
+  footer { padding: 4rem 4% 2rem; }
+  .hero-stats { gap: 1.5rem; }
+  .form-row { grid-template-columns: 1fr; }
+}

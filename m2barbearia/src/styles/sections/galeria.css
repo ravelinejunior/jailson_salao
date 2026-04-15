@@ -1,0 +1,111 @@
+/* ── GALERIA ── */
+#galeria {
+  padding: 7rem 5%;
+  background: var(--dark-2);
+}
+
+.galeria-header { margin-bottom: 3rem; }
+
+/* GALERIA — substitui os .foto-placeholder por <img> com as tuas fotos */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+
+.galeria-item {
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.galeria-item:hover { border-color: var(--gold-border); }
+
+.galeria-item:nth-child(1) { grid-column: span 5; grid-row: span 2; }
+.galeria-item:nth-child(2) { grid-column: span 4; }
+.galeria-item:nth-child(3) { grid-column: span 3; }
+.galeria-item:nth-child(4) { grid-column: span 4; }
+.galeria-item:nth-child(5) { grid-column: span 3; }
+.galeria-item:nth-child(6) { grid-column: span 4; }
+.galeria-item:nth-child(7) { grid-column: span 4; }
+
+.galeria-item .foto-placeholder {
+  width: 100%;
+  height: 220px;
+  background: var(--dark-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+}
+
+.galeria-item:nth-child(1) .foto-placeholder { height: 450px; }
+
+/* Quando tiveres fotos reais: */
+.galeria-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.galeria-item .galeria-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 50%, rgba(0,0,0,0.8));
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.galeria-item:hover .galeria-overlay { opacity: 1; }
+
+.galeria-overlay-tag {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--cream);
+  font-weight: 500;
+}
+
+/* foto placeholder styling */
+.ph-icon  { font-size: 2.5rem; opacity: 0.2; }
+.ph-label {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.5;
+  font-weight: 600;
+}
+.ph-sub {
+  font-size: 0.6rem;
+  color: var(--muted-2);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.galeria-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.galeria-cta a {
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.82rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 1px solid var(--gold-border);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+
+.galeria-cta a:hover { border-color: var(--gold); }

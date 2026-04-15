@@ -1,0 +1,13 @@
+{
+  "name": "m2barbearia",
+  "version": "1.0.0",
+  "description": "Site oficial da M2 Barbearia — Braga, Portugal",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

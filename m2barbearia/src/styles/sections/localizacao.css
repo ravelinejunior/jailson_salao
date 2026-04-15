@@ -1,0 +1,74 @@
+/* ── MAPA / LOCALIZAÇÃO ── */
+#localizacao {
+  padding: 7rem 5%;
+  background: var(--dark);
+}
+
+.loc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.loc-map {
+  aspect-ratio: 16/10;
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--dark-3);
+}
+
+.loc-map iframe {
+  width: 100%; height: 100%;
+  border: none;
+  filter: invert(90%) hue-rotate(180deg);
+}
+
+.loc-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.loc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.loc-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.loc-item-icon {
+  width: 40px; height: 40px;
+  flex-shrink: 0;
+  background: var(--gold-dim);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.loc-item-label {
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.loc-item-val {
+  font-size: 0.92rem;
+  color: var(--cream);
+  font-weight: 400;
+  line-height: 1.5;
+}

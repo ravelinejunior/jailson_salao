@@ -1,0 +1,117 @@
+/* ── SERVIÇOS ── */
+#servicos {
+  padding: 7rem 5%;
+  background: var(--dark);
+}
+
+.servicos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--gold-border);
+  border: 1px solid var(--gold-border);
+}
+
+.servico-card {
+  background: var(--dark);
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+  cursor: default;
+}
+
+.servico-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(.16,1,.3,1);
+}
+
+.servico-card:hover { background: var(--dark-3); }
+.servico-card:hover::after { transform: scaleX(1); }
+
+.servico-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.servico-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.servico-duracao {
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.servico-nome {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.servico-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.servico-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.servico-preco {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.servico-preco small {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 400;
+  display: block;
+  line-height: 1.2;
+}
+
+.servico-book-link {
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.servico-book-link:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}

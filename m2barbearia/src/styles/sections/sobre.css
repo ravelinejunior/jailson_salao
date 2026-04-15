@@ -1,0 +1,113 @@
+/* ── SOBRE ── */
+#sobre {
+  padding: 7rem 5%;
+  background: var(--dark-2);
+}
+
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.sobre-features {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sobre-feat {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.sobre-feat:first-child { padding-top: 0; }
+.sobre-feat:last-child  { border-bottom: none; padding-bottom: 0; }
+
+.sobre-feat-icon {
+  width: 42px; height: 42px;
+  flex-shrink: 0;
+  background: var(--gold-dim);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.sobre-feat-title {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.sobre-feat-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* FOTO SOBRE — bloco direito */
+.sobre-visual {
+  position: relative;
+}
+
+.sobre-img-wrap {
+  aspect-ratio: 4/5;
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+}
+
+.sobre-img-wrap .foto-placeholder {
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, var(--dark-3) 0%, var(--dark-4) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sobre-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sobre-badge {
+  position: absolute;
+  bottom: -1.2rem; left: -1.2rem;
+  background: var(--dark);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius);
+  padding: 1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sobre-badge-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.sobre-badge-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
