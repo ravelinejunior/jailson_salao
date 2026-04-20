@@ -30,55 +30,55 @@
    Themes override the same CSS variables used across the site.
    Apply by setting: <body data-theme="light-cream"> */
 
-/* Light - Creamy */
-body[data-theme="light-cream"] {
-  --gold: #C08E3A;
-  --gold-light: #EBCF8E;
-  --gold-dim: rgba(192,142,58,0.08);
-  --gold-border: rgba(192,142,58,0.18);
-  --dark: #FBF8F4;     /* page background */
-  --dark-2: #F2EDE8;
-  --dark-3: #E8E0D6;
-  --dark-4: #DCCFC1;
-  --dark-5: #CFC0AF;
-  --cream: #111111;    /* main text */
-  --white: #FFFFFF;
-  --muted: #666666;
-  --muted-2: #888888;
-}
-
-/* Light - Minimal (white + cyan accent) */
-body[data-theme="light-minimal"] {
-  --gold: #0EA5E9;
-  --gold-light: #7DD3FC;
-  --gold-dim: rgba(14,165,233,0.08);
-  --gold-border: rgba(14,165,233,0.18);
-  --dark: #FFFFFF;
-  --dark-2: #F8FAFC;
-  --dark-3: #F1F5F9;
-  --dark-4: #E2E8F0;
-  --dark-5: #CBD5E1;
-  --cream: #0F172A;
-  --white: #FFFFFF;
-  --muted: #64748B;
-  --muted-2: #94A3B8;
-}
-
-/* Fun / Playful - Neon accent */
-body[data-theme="neon"] {
-  --gold: #FF2D95;
-  --gold-light: #FFD24D;
-  --gold-dim: rgba(255,45,149,0.08);
-  --gold-border: rgba(255,45,149,0.18);
-  --dark: #F7F8FB;
-  --dark-2: #EEF2FF;
-  --dark-3: #E6FDF5;
-  --dark-4: #FDF6FF;
-  --dark-5: #F3E8FF;
-  --cream: #111827;
+/* Light - Classic */
+body[data-theme="light-classic"] {
+  --gold: #B8864B;
+  --gold-light: #E6CFA1;
+  --gold-dim: rgba(184,134,75,0.08);
+  --gold-border: rgba(184,134,75,0.18);
+  --dark: #FBF9F6;     /* page background */
+  --dark-2: #F3EFEA;
+  --dark-3: #E9E3DD;
+  --dark-4: #DDD2C7;
+  --dark-5: #D1C3B3;
+  --cream: #1F2937;    /* main text (dark) */
   --white: #FFFFFF;
   --muted: #6B7280;
   --muted-2: #9CA3AF;
+}
+
+/* Light - Modern */
+body[data-theme="light-modern"] {
+  --gold: #2563EB; /* primary accent (blue) */
+  --gold-light: #7FB3FF;
+  --gold-dim: rgba(37,99,235,0.08);
+  --gold-border: rgba(37,99,235,0.18);
+  --dark: #FFFFFF;
+  --dark-2: #F8FAFC;
+  --dark-3: #F1F5F9;
+  --dark-4: #E6EEF9;
+  --dark-5: #DCE8F8;
+  --cream: #0F172A; /* main text (dark) */
+  --white: #FFFFFF;
+  --muted: #475569;
+  --muted-2: #94A3B8;
+}
+
+/* Slate Dark - refined dark alternative */
+body[data-theme="slate-dark"] {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-dim: rgba(201,168,76,0.06);
+  --gold-border: rgba(201,168,76,0.18);
+  --dark: #0B1220;
+  --dark-2: #0E1724;
+  --dark-3: #111827;
+  --dark-4: #16202B;
+  --dark-5: #1B2633;
+  --cream: #E6EDF3; /* text */
+  --white: #FFFFFF;
+  --muted: #9AA5B1;
+  --muted-2: #7A8792;
 }
 
 /* Theme selector styling */
