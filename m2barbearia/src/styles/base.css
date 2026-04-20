@@ -26,6 +26,73 @@
   --radius:      4px;
 }
 
+/* ── Additional themes: light-cream, light-minimal, neon ──
+   Themes override the same CSS variables used across the site.
+   Apply by setting: <body data-theme="light-cream"> */
+
+/* Light - Creamy */
+body[data-theme="light-cream"] {
+  --gold: #C08E3A;
+  --gold-light: #EBCF8E;
+  --gold-dim: rgba(192,142,58,0.08);
+  --gold-border: rgba(192,142,58,0.18);
+  --dark: #FBF8F4;     /* page background */
+  --dark-2: #F2EDE8;
+  --dark-3: #E8E0D6;
+  --dark-4: #DCCFC1;
+  --dark-5: #CFC0AF;
+  --cream: #111111;    /* main text */
+  --white: #FFFFFF;
+  --muted: #666666;
+  --muted-2: #888888;
+}
+
+/* Light - Minimal (white + cyan accent) */
+body[data-theme="light-minimal"] {
+  --gold: #0EA5E9;
+  --gold-light: #7DD3FC;
+  --gold-dim: rgba(14,165,233,0.08);
+  --gold-border: rgba(14,165,233,0.18);
+  --dark: #FFFFFF;
+  --dark-2: #F8FAFC;
+  --dark-3: #F1F5F9;
+  --dark-4: #E2E8F0;
+  --dark-5: #CBD5E1;
+  --cream: #0F172A;
+  --white: #FFFFFF;
+  --muted: #64748B;
+  --muted-2: #94A3B8;
+}
+
+/* Fun / Playful - Neon accent */
+body[data-theme="neon"] {
+  --gold: #FF2D95;
+  --gold-light: #FFD24D;
+  --gold-dim: rgba(255,45,149,0.08);
+  --gold-border: rgba(255,45,149,0.18);
+  --dark: #F7F8FB;
+  --dark-2: #EEF2FF;
+  --dark-3: #E6FDF5;
+  --dark-4: #FDF6FF;
+  --dark-5: #F3E8FF;
+  --cream: #111827;
+  --white: #FFFFFF;
+  --muted: #6B7280;
+  --muted-2: #9CA3AF;
+}
+
+/* Theme selector styling */
+.theme-select {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--cream);
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+.theme-select:focus { outline: none; box-shadow: 0 0 0 3px rgba(201,168,76,0.08); }
+
 html {
   scroll-behavior: smooth;
 }

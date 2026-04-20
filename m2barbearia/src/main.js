@@ -22,10 +22,12 @@ import './styles/responsive.css';
 import { init as initNavbar }    from './js/modules/navbar.js';
 import { init as initActiveNav } from './js/modules/activeNav.js';
 import { init as initReviews }   from './js/modules/reviews.js';
+import { init as initTheme }     from './js/modules/theme.js';
 
 // Inicializa tudo quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initActiveNav();
   initReviews();
+  initTheme();
 });
