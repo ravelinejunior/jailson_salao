@@ -2,6 +2,7 @@
 import './styles/base.css';
 import './styles/utilities.css';
 import './styles/buttons.css';
+import './styles/animations.css';
 
 // ── CSS — secções ──
 import './styles/sections/navbar.css';

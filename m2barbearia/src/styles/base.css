@@ -10,20 +10,28 @@
 }
 
 :root {
-  --gold:        #C9A84C;
-  --gold-light:  #E8C97A;
-  --gold-dim:    rgba(201,168,76,0.15);
-  --gold-border: rgba(201,168,76,0.25);
-  --dark:        #0D0D0D;
-  --dark-2:      #141414;
+  --gold:        #D4AF37;
+  --gold-light:  #F0E68C;
+  --gold-dim:    rgba(212,175,55,0.12);
+  --gold-border: rgba(212,175,55,0.25);
+  --dark:        #0A0A0A;
+  --dark-2:      #121212;
   --dark-3:      #1A1A1A;
-  --dark-4:      #222222;
-  --dark-5:      #2A2A2A;
-  --cream:       #F2EDE3;
+  --dark-4:      #242424;
+  --dark-5:      #2D2D2D;
+  --cream:       #F5F1ED;
   --white:       #FFFFFF;
-  --muted:       #777;
-  --muted-2:     #555;
+  --muted:       #A8A8A8;
+  --muted-2:     #808080;
   --radius:      4px;
+  
+  /* Gradients */
+  --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #F0E68C 100%);
+  --gradient-dark: linear-gradient(135deg, #1A1A1A 0%, #242424 100%);
+  --gradient-button: linear-gradient(135deg, #D4AF37 0%, #C99A2E 100%);
+  
+  /* Navbar */
+  --navbar-bg: rgba(10, 10, 10, 0.94);
 }
 
 /* ── Additional themes: light-cream, light-minimal, neon ──
@@ -32,53 +40,77 @@
 
 /* Light - Classic */
 body[data-theme="light-classic"] {
-  --gold: #B8864B;
-  --gold-light: #E6CFA1;
-  --gold-dim: rgba(184,134,75,0.08);
-  --gold-border: rgba(184,134,75,0.18);
-  --dark: #FBF9F6;     /* page background */
-  --dark-2: #F3EFEA;
-  --dark-3: #E9E3DD;
-  --dark-4: #DDD2C7;
-  --dark-5: #D1C3B3;
-  --cream: #1F2937;    /* main text (dark) */
+  --gold: #A67C52;
+  --gold-light: #D4985B;
+  --gold-dim: rgba(166,124,82,0.08);
+  --gold-border: rgba(166,124,82,0.2);
+  --dark: #FEFDFB;     /* page background */
+  --dark-2: #F7F3ED;
+  --dark-3: #EEE8E1;
+  --dark-4: #E5DDD2;
+  --dark-5: #DCD1C4;
+  --cream: #2C2420;    /* main text (dark) */
   --white: #FFFFFF;
-  --muted: #6B7280;
-  --muted-2: #9CA3AF;
+  --muted: #5A5350;
+  --muted-2: #7A6F68;
+  
+  /* Gradients for light classic */
+  --gradient-gold: linear-gradient(135deg, #A67C52 0%, #D4985B 100%);
+  --gradient-dark: linear-gradient(135deg, #F7F3ED 0%, #EEE8E1 100%);
+  --gradient-button: linear-gradient(135deg, #A67C52 0%, #8B6844 100%);
+  
+  /* Navbar - light background for light theme */
+  --navbar-bg: rgba(247, 243, 237, 0.94);
 }
 
 /* Light - Modern */
 body[data-theme="light-modern"] {
-  --gold: #2563EB; /* primary accent (blue) */
-  --gold-light: #7FB3FF;
-  --gold-dim: rgba(37,99,235,0.08);
-  --gold-border: rgba(37,99,235,0.18);
+  --gold: #1E40AF; /* primary accent (deeper blue) */
+  --gold-light: #3B82F6;
+  --gold-dim: rgba(30,64,175,0.08);
+  --gold-border: rgba(30,64,175,0.2);
   --dark: #FFFFFF;
-  --dark-2: #F8FAFC;
-  --dark-3: #F1F5F9;
-  --dark-4: #E6EEF9;
-  --dark-5: #DCE8F8;
-  --cream: #0F172A; /* main text (dark) */
+  --dark-2: #F9FAFB;
+  --dark-3: #F3F4F6;
+  --dark-4: #E5E7EB;
+  --dark-5: #D1D5DB;
+  --cream: #111827; /* main text (dark) */
   --white: #FFFFFF;
-  --muted: #475569;
-  --muted-2: #94A3B8;
+  --muted: #4B5563;
+  --muted-2: #6B7280;
+  
+  /* Gradients for light modern */
+  --gradient-gold: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+  --gradient-dark: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+  --gradient-button: linear-gradient(135deg, #1E40AF 0%, #1B3BA8 100%);
+  
+  /* Navbar - light background for light theme */
+  --navbar-bg: rgba(249, 250, 251, 0.94);
 }
 
 /* Slate Dark - refined dark alternative */
 body[data-theme="slate-dark"] {
-  --gold: #C9A84C;
-  --gold-light: #E8C97A;
-  --gold-dim: rgba(201,168,76,0.06);
-  --gold-border: rgba(201,168,76,0.18);
-  --dark: #0B1220;
-  --dark-2: #0E1724;
-  --dark-3: #111827;
-  --dark-4: #16202B;
-  --dark-5: #1B2633;
-  --cream: #E6EDF3; /* text */
+  --gold: #FCD34D;
+  --gold-light: #FDE68A;
+  --gold-dim: rgba(252,211,77,0.08);
+  --gold-border: rgba(252,211,77,0.2);
+  --dark: #0F172E;
+  --dark-2: #131D3D;
+  --dark-3: #1A2847;
+  --dark-4: #243255;
+  --dark-5: #2D3E67;
+  --cream: #E8ECEF; /* text */
   --white: #FFFFFF;
-  --muted: #9AA5B1;
-  --muted-2: #7A8792;
+  --muted: #A5B0BE;
+  --muted-2: #7A8695;
+  
+  /* Gradients for slate dark */
+  --gradient-gold: linear-gradient(135deg, #FCD34D 0%, #FDE68A 100%);
+  --gradient-dark: linear-gradient(135deg, #1A2847 0%, #243255 100%);
+  --gradient-button: linear-gradient(135deg, #FCD34D 0%, #FBB6CE 100%);
+  
+  /* Navbar - dark background for dark theme */
+  --navbar-bg: rgba(15, 23, 46, 0.94);
 }
 
 /* Theme selector styling */

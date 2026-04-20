@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.1rem 5%;
-  background: rgba(13,13,13,0.94);
+  background: var(--navbar-bg);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--gold-border);
@@ -84,7 +84,7 @@
   display: none;
   position: fixed;
   top: 60px; left: 0; right: 0;
-  background: rgba(13,13,13,0.98);
+  background: var(--navbar-bg);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--gold-border);
   padding: 1.5rem 5%;

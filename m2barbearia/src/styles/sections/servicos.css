@@ -22,11 +22,11 @@
 }
 
 .servico-card {
-  background: var(--dark);
+  background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%);
   padding: 2.5rem 2rem;
   position: relative;
   overflow: hidden;
-  transition: background 0.3s;
+  transition: all 0.3s;
   cursor: default;
 }
 
@@ -41,7 +41,7 @@
   transition: transform 0.4s cubic-bezier(.16,1,.3,1);
 }
 
-.servico-card:hover { background: var(--dark-3); }
+.servico-card:hover { background: linear-gradient(135deg, var(--dark-3) 0%, var(--dark-4) 100%); }
 .servico-card:hover::after { transform: scaleX(1); }
 
 .servico-top {
@@ -68,7 +68,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--cream);
   margin-bottom: 0.6rem;
 }
 

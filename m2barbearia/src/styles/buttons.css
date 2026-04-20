@@ -7,7 +7,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--gold);
+  background: var(--gradient-button);
   color: var(--dark);
   border: none;
   padding: 0.85rem 2rem;
@@ -20,12 +20,12 @@
   border-radius: var(--radius);
   text-decoration: none;
   transition: all 0.25s;
+  box-shadow: 0 4px 15px rgba(212,175,55,0.2);
 }
 
 .btn-gold:hover {
-  background: var(--gold-light);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(201,168,76,0.25);
+  box-shadow: 0 8px 24px rgba(212,175,55,0.35);
 }
 
 .btn-outline {
@@ -34,7 +34,7 @@
   gap: 8px;
   background: transparent;
   color: var(--cream);
-  border: 1px solid rgba(242,237,227,0.25);
+  border: 2px solid var(--gold-border);
   padding: 0.85rem 2rem;
   font-family: 'Barlow', sans-serif;
   font-size: 0.82rem;
@@ -50,4 +50,5 @@
 .btn-outline:hover {
   border-color: var(--gold);
   color: var(--gold);
+  background: rgba(212,175,55,0.05);
 }
