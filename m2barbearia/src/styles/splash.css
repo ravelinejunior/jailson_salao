@@ -1,0 +1,431 @@
+/* ============================================================
+   M2 BARBEARIA — SPLASH SCREEN
+   Monocromática, estilo barbearia antiga e rústica
+   ============================================================ */
+
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+  animation: splashFadeOut 0.8s ease-out forwards 3s;
+}
+
+.splash-screen.hidden {
+  pointer-events: none;
+  animation: splashFadeOut 0.8s ease-out forwards;
+}
+
+@keyframes splashFadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.splash-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+/* ── Texture de fundo (envelhecido) ── */
+.splash-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.01) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  pointer-events: none;
+  z-index: 1;
+  animation: grainShift 8s linear infinite;
+}
+
+@keyframes grainShift {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+/* ── Conteúdo principal ── */
+.splash-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  animation: contentSlideUp 1s ease-out;
+}
+
+@keyframes contentSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Círculo decorativo (barber pole inspired) ── */
+.splash-circle {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 1rem;
+  animation: circlePulse 2s ease-in-out infinite;
+}
+
+@keyframes circlePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.splash-circle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 3px solid #4a4a4a;
+  border-radius: 50%;
+  animation: circleBorder 3s linear infinite;
+}
+
+@keyframes circleBorder {
+  0%, 100% {
+    border-color: #4a4a4a;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    border-color: #5a5a5a;
+    box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ── SVG Striped Circle (Barber Pole) ── */
+.barber-pole {
+  position: absolute;
+  inset: 8px;
+  animation: rotatePole 4s linear infinite;
+}
+
+@keyframes rotatePole {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.pole-stripe {
+  stroke: #555;
+  stroke-width: 12;
+  fill: none;
+  stroke-dasharray: 60, 60;
+  animation: stripesFlow 2s linear infinite;
+}
+
+@keyframes stripesFlow {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 120; }
+}
+
+/* ── Logo/Texto Principal ── */
+.splash-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #f5f1ed;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  animation: logoFadeIn 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+@keyframes logoFadeIn {
+  from {
+    opacity: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  to {
+    opacity: 1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* ── Tagline ── */
+.splash-tagline {
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #a8a8a8;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 2rem;
+  max-width: 400px;
+  animation: taglineFadeIn 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+@keyframes taglineFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ── Divider Lines (estilo rústico) ── */
+.splash-divider {
+  position: absolute;
+  height: 1px;
+  width: 80px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #555 20%,
+    #555 80%,
+    transparent 100%
+  );
+  animation: dividerFadeIn 0.8s ease-out 0.9s forwards;
+  opacity: 0;
+}
+
+.splash-divider.top {
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.splash-divider.bottom {
+  bottom: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes dividerFadeIn {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 80px;
+  }
+}
+
+/* ── Loading indicator (sutil) ── */
+.splash-loader {
+  margin-top: 2rem;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  animation: loaderFadeIn 1s ease-out 1.2s forwards;
+  opacity: 0;
+}
+
+.loader-dot {
+  width: 4px;
+  height: 4px;
+  background-color: #5a5a5a;
+  border-radius: 50%;
+  animation: dotPulse 1.4s infinite;
+}
+
+.loader-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loader-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dotPulse {
+  0%, 60%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes loaderFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ── Cantos decorativos (ornamentais) ── */
+.splash-corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #3a3a3a;
+}
+
+.splash-corner.top-left {
+  top: 40px;
+  left: 40px;
+  border-right: none;
+  border-bottom: none;
+  animation: cornerFadeIn 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.splash-corner.top-right {
+  top: 40px;
+  right: 40px;
+  border-left: none;
+  border-bottom: none;
+  animation: cornerFadeIn 0.8s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.splash-corner.bottom-left {
+  bottom: 40px;
+  left: 40px;
+  border-right: none;
+  border-top: none;
+  animation: cornerFadeIn 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.splash-corner.bottom-right {
+  bottom: 40px;
+  right: 40px;
+  border-left: none;
+  border-top: none;
+  animation: cornerFadeIn 0.8s ease-out 0.7s forwards;
+  opacity: 0;
+}
+
+@keyframes cornerFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Mobile responsivo ── */
+@media (max-width: 768px) {
+  .splash-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .splash-logo {
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+  }
+
+  .splash-tagline {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+  }
+
+  .splash-corner {
+    width: 30px;
+    height: 30px;
+    top: 20px !important;
+    left: 20px !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  .splash-corner.top-right {
+    right: 20px !important;
+    left: auto !important;
+  }
+
+  .splash-corner.bottom-left {
+    left: 20px !important;
+    bottom: 20px !important;
+    top: auto !important;
+  }
+
+  .splash-corner.bottom-right {
+    right: 20px !important;
+    bottom: 20px !important;
+    top: auto !important;
+    left: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .splash-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .splash-logo {
+    font-size: 2rem;
+    letter-spacing: 4px;
+  }
+
+  .splash-tagline {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  .splash-divider {
+    width: 60px;
+  }
+
+  .splash-content {
+    gap: 1rem;
+  }
+}

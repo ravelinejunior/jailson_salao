@@ -3,6 +3,7 @@ import './styles/base.css';
 import './styles/utilities.css';
 import './styles/buttons.css';
 import './styles/animations.css';
+import './styles/splash.css';
 
 // ── CSS — secções ──
 import './styles/sections/navbar.css';
@@ -24,9 +25,11 @@ import { init as initNavbar }    from './js/modules/navbar.js';
 import { init as initActiveNav } from './js/modules/activeNav.js';
 import { init as initReviews }   from './js/modules/reviews.js';
 import { init as initTheme }     from './js/modules/theme.js';
+import { initSplashScreen }      from './js/modules/splash.js';
 
 // Inicializa tudo quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', () => {
+  initSplashScreen();
   initNavbar();
   initActiveNav();
   initReviews();
