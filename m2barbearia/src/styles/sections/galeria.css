@@ -15,7 +15,7 @@
 }
 
 .galeria-item {
-  border-radius: 3px;
+  border-radius: 12px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
